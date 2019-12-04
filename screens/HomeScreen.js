@@ -28,7 +28,7 @@ export default function HomeScreen() {
             style={styles.welcomeImage}
           />
 
-          <RobotoText font= "black" style={{fontSize: 30, marginVertical: 20,}}>Hello World</RobotoText>
+          <RobotoText font= "black" style={{fontSize: 30, marginVertical: 20,}}>Welcome</RobotoText>
         </View>
       </ScrollView>
     </View>
@@ -36,7 +36,7 @@ export default function HomeScreen() {
 }
 
 HomeScreen.navigationOptions = {
-  header: null,
+  title: 'Home',
 };
 
 const styles = StyleSheet.create({
