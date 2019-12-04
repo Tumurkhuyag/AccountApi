@@ -10,7 +10,7 @@ import {
   View,
 } from 'react-native';
 
-import { MonoText } from '../components/StyledText';
+import { RobotoText } from '../components/StyledText';
 
 export default function HomeScreen() {
   return (
@@ -36,7 +36,7 @@ export default function HomeScreen() {
 
           <View
             style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
+            <RobotoText>screens/HomeScreen.js</RobotoText>
           </View>
 
           <Text style={styles.getStartedText}>
@@ -60,9 +60,9 @@ export default function HomeScreen() {
 
         <View
           style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>
+          <RobotoText style={styles.codeHighlightText}>
             navigation/MainTabNavigator.js
-          </MonoText>
+          </RobotoText>
         </View>
       </View>
     </View>

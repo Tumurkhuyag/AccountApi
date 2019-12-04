@@ -40,6 +40,13 @@ async function loadResourcesAsync() {
       // We include SpaceMono because we use it in HomeScreen.js. Feel free to
       // remove this if you are not using it in your app
       'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+      'fa-solid-900': require('./assets/fonts/fa-solid-900.ttf'),
+      'fa-regular-400': require('./assets/fonts/fa-regular-400.ttf'),
+      'fa-brands-400': require('./assets/fonts/fa-brands-400.ttf'),
+      'Roboto-Black': require('./assets/fonts/Roboto-Black.ttf'),
+      'Roboto-Bold': require('./assets/fonts/Roboto-Bold.ttf'),
+      'Roboto-Medium': require('./assets/fonts/Roboto-Medium.ttf'),
+      'Roboto-Regular': require('./assets/fonts/Roboto-Regular.ttf'),
     }),
   ]);
 }
