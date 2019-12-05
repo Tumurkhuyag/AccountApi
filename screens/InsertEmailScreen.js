@@ -3,6 +3,8 @@ import { KeyboardAvoidingView, View, TouchableOpacity, Image, TexInput, StyleShe
 
 import { RobotoText } from '../components/StyledText';
 import { CustomTextInput } from '../components/CustomTextInput';
+import { PrimaryButton } from '../components/buttons/PrimaryButton';
+import { SecondaryButton } from '../components/buttons/SecondaryButton';
 
 export default function InsertEmailScreen() {
   return (
@@ -14,18 +16,20 @@ export default function InsertEmailScreen() {
               font="regular"
               placeholder="Enter your email address"
               autoFocus={true}
-              style={{height: 30}}
+              autoCapitalize= 'none'
+              keyboardType='email-address'
+              textContentType='emailAddress'
           />
           
-          <TouchableOpacity style={{height: 40, backgroundColor: '#000', justifyContent: 'center', alignItems: 'center', marginTop: 10}} >
-            <RobotoText font="regular" style={{color: '#fff', fontSize: 17}}>Next</RobotoText>
-          </TouchableOpacity>
+          <View style={{marginTop: 10,}}>
+            <PrimaryButton text="Next"/>
+          </View>
         </View>
         
         <View style={{flexDirection: 'column', marginBottom: 20,}}>
-          <TouchableOpacity style={{height: 40, borderColor: '#E6E6E6', borderWidth: 1, justifyContent: 'center', alignItems: 'center',}} >
-            <RobotoText font="regular" style={{color: '#000', fontSize: 17}}>Use Mobile Number</RobotoText>
-          </TouchableOpacity>
+          <View>
+            <SecondaryButton text="Use Mobile Number"/>
+          </View>
 
           <View style={{height: 18, justifyContent: 'center', marginVertical: 5, marginHorizontal: 20, }}>
             <View style={{height:1, backgroundColor: '#E6E6E6'}}></View>
@@ -36,14 +40,14 @@ export default function InsertEmailScreen() {
           
           <View style={{flexDirection: 'row'}}>
             <View style={{flex: 1, marginRight: 7.5}}>
-              <TouchableOpacity style={{height: 40, borderColor: '#E6E6E6', borderWidth: 1, justifyContent: 'center', alignItems: 'center',}} >
-                <RobotoText font="regular" style={{color: '#000', fontSize: 17}}>Facebook</RobotoText>
-              </TouchableOpacity>
+              <View>
+                <SecondaryButton iconType="brand" iconColor="#3b5998" iconSize={18} fontIcon="" text="Facebook"/>
+              </View>
             </View>
             <View style={{flex: 1, marginLeft: 7.5}}>
-              <TouchableOpacity style={{height: 40, borderColor: '#E6E6E6', borderWidth: 1, justifyContent: 'center', alignItems: 'center',}} >
-                <RobotoText font="regular" style={{color: '#000', fontSize: 17}}>Google</RobotoText>
-              </TouchableOpacity>
+              <View>
+                <SecondaryButton iconType="brand" iconColor="#4285F4" iconSize={18} fontIcon="" text="Google"/>
+              </View>
             </View>
           </View>
         </View>
