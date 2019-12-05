@@ -23,7 +23,6 @@ export function CustomTextInput(props) {
     <TextInput
             {...props}
             placeholderTextColor="#999999"
-            autoFocus={true}
             style={[props.styel, {fontFamily: fontName, height: 40, backgroundColor: '#EFEFEF', borderColor: '#E6E6E6', borderWidth: 1, fontSize: 17, paddingHorizontal: 10,}]}
         />
   );
