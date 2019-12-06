@@ -23,6 +23,7 @@ export function CustomTextInput(props) {
     <TextInput
             {...props}
             placeholderTextColor="#999999"
+            clearButtonMode='while-editing'
             style={[props.style, {fontFamily: fontName, backgroundColor: '#EFEFEF', borderColor: '#E6E6E6', borderWidth: 1, fontSize: 17, paddingHorizontal: 10, paddingVertical: 10,}]}
         />
   );
