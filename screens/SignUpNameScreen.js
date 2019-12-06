@@ -4,9 +4,9 @@ import { KeyboardAvoidingView, View, } from 'react-native';
 import { RobotoText } from '../components/StyledText';
 import { CustomTextInput } from '../components/CustomTextInput';
 import { PrimaryButton } from '../components/buttons/PrimaryButton';
-import { SecondaryButton } from '../components/buttons/SecondaryButton';
+import BackButton from '../components/buttons/BackButton';
 
-export default function SignUpNameScreen() {
+export default function SignUpNameScreen({navigation}) {
     return (
         <KeyboardAvoidingView behavior='padding' style={{flex: 1, flexDirection: 'column', justifyContent: 'space-between', marginHorizontal: 20,}}>
             <View style={{marginTop: 40,}}>
@@ -14,20 +14,26 @@ export default function SignUpNameScreen() {
                 
                 <CustomTextInput
                     font="regular"
-                    placeholder="Full name"
+                    placeholder="Your name"
                     autoFocus={true}
                     keyboardType='default'
                     textContentType='name'
                 />
                 
                 <View style={{marginTop: 10,}}>
-                    <PrimaryButton text="Next" onPress={() => navigation.navigate('SignUpName')}/>
+                    <PrimaryButton text="Next" onPress={() => navigation.navigate('SignUpPassword')}/>
                 </View>
+
+                <View style={{marginTop: 10}}>
+                    <RobotoText font='regular' style={{fontSize: 15, color: '#999999', textAlign: 'center'}}>Using your real name makes it easier for friends to recognize you.</RobotoText>
+                </View>
+    
             </View>
         </KeyboardAvoidingView>
     );
 }
 
-SignUpNameScreen.navigationOptions = {
-    Title: 'Sign Up',
-};
+SignUpNameScreen.navigationOptions = ({navigation}) => ({
+    headerTitle: () => <RobotoText font='medium' style={{fontSize: 17}}>Sign Up</RobotoText>,
+    headerLeft: () => <BackButton onPress={() => navigation.goBack()} />,
+});
