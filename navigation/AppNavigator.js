@@ -3,9 +3,11 @@ import { createAppContainer, createSwitchNavigator, createStackNavigator } from 
 
 import MainTabNavigator from './MainTabNavigator';
 import InsertEmailScreen from '../screens/InsertEmailScreen';
+import SignUpNameScreen from '../screens/SignUpNameScreen';
 
 const AuthStack = createStackNavigator({
   InsertEmail: InsertEmailScreen,
+  SignUpName: SignUpNameScreen,
 })
 
 const MainStack = createStackNavigator({

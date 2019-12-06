@@ -1,12 +1,12 @@
 import React from 'react';
-import { KeyboardAvoidingView, View, TouchableOpacity, Image, TexInput, StyleSheet, } from 'react-native';
+import { KeyboardAvoidingView, View, } from 'react-native';
 
 import { RobotoText } from '../components/StyledText';
 import { CustomTextInput } from '../components/CustomTextInput';
 import { PrimaryButton } from '../components/buttons/PrimaryButton';
 import { SecondaryButton } from '../components/buttons/SecondaryButton';
 
-export default function InsertEmailScreen() {
+export default function InsertEmailScreen({navigation}) {
   return (
     <KeyboardAvoidingView behavior='padding' style={{flex: 1, flexDirection: 'column', justifyContent: 'space-between', marginHorizontal: 20,}}>
         <View style={{marginTop: 108,}}>
@@ -22,13 +22,13 @@ export default function InsertEmailScreen() {
           />
           
           <View style={{marginTop: 10,}}>
-            <PrimaryButton text="Next"/>
+            <PrimaryButton text="Next" onPress={() => navigation.navigate('SignUpName')}/>
           </View>
         </View>
         
         <View style={{flexDirection: 'column', marginBottom: 20,}}>
           <View>
-            <SecondaryButton text="Use Mobile Number"/>
+            <SecondaryButton text='Use Mobile Number'/>
           </View>
 
           <View style={{height: 18, justifyContent: 'center', marginVertical: 5, marginHorizontal: 20, }}>
@@ -59,6 +59,3 @@ export default function InsertEmailScreen() {
 InsertEmailScreen.navigationOptions = {
   header: null,
 };
-
-const styles = StyleSheet.create({
-});
