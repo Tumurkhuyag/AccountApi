@@ -49,4 +49,5 @@ export default function SignUpEmailAuthScreen({navigation}) {
 
 SignUpEmailAuthScreen.navigationOptions = ({navigation}) => ({
     headerTitle: () => <RobotoText font='medium' style={{fontSize: 17}}>Sign Up</RobotoText>,
+    headerLeft: null,
 });
