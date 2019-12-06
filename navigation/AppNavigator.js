@@ -4,10 +4,25 @@ import { createAppContainer, createSwitchNavigator, createStackNavigator } from 
 import MainTabNavigator from './MainTabNavigator';
 import InsertEmailScreen from '../screens/InsertEmailScreen';
 import SignUpNameScreen from '../screens/SignUpNameScreen';
+import SignUpPasswordScreen from '../screens/SignUpPasswordScreen';
+import SignUpAgreementScreen from '../screens/SignUpAgreementScreen';
+import SignUpEmailAuthScreen from '../screens/SignUpEmailAuthScreen';
 
 const AuthStack = createStackNavigator({
   InsertEmail: InsertEmailScreen,
   SignUpName: SignUpNameScreen,
+  SignUpPassword: SignUpPasswordScreen,
+  SignUpAgreement: SignUpAgreementScreen,
+  SignUpEmailAuth: SignUpEmailAuthScreen,
+},
+{
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: '#fff',
+      borderBottomWidth: 1,
+      borderBottomColor: '#efefef',
+    }
+  }
 })
 
 const MainStack = createStackNavigator({
