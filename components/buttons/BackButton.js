@@ -7,7 +7,7 @@ import { RobotoText } from '../StyledText';
 export default function BackButton(props) {
   return (
     <TouchableOpacity
-      style={{flex: 1, flexDirection: 'row'}}
+      style={{flex: 1, flexDirection: 'row', height: 44, alignItems: 'center'}}
       onPress={props.onPress}
      >
       <FontIcon
@@ -17,7 +17,7 @@ export default function BackButton(props) {
         style={{ marginLeft: 10 }}
         color={'#000'}
       />
-      <RobotoText font="regular" style={{fontSize: 17, marginLeft: 4,}}>Back</RobotoText>
+      <RobotoText font="regular" style={{fontSize: 17, marginHorizontal: 4,}}>Back</RobotoText>
      </TouchableOpacity>
   );
 }
