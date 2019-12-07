@@ -27,6 +27,11 @@ const AuthStack = createStackNavigator({
 
 const MainStack = createStackNavigator({
   MainTab: MainTabNavigator
+},
+{
+  defaultNavigationOptions: {
+    header: null,
+  }
 })
 
 export default createAppContainer(createSwitchNavigator(
@@ -39,6 +44,6 @@ export default createAppContainer(createSwitchNavigator(
     AuthStack,
   },
   {
-    initialRouteName: 'AuthStack'
-  }
+    initialRouteName: 'MainStack'
+  },
 ));

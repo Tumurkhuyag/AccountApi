@@ -8,7 +8,7 @@ export default function TabBarIcon(props) {
     <FontIcon
     	font="solid"
       fontIcon={props.fontIcon}
-      size={22}
+      size={24}
       style={{ marginBottom: -3 }}
       color={props.focused ? Colors.tabIconSelected : Colors.tabIconDefault}
     />

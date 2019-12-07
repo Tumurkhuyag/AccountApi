@@ -1,58 +1,42 @@
 import React from 'react';
 import {
-  Image,
   ScrollView,
-  StyleSheet,
   View,
 } from 'react-native';
 
+import MeButton  from '../components/buttons/MeButton';
 import { RobotoText } from '../components/StyledText';
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
-        <View style={styles.welcomeContainer}>
-          <Image
-            source={
-              __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
-          />
-
-          <RobotoText font= "black" style={{fontSize: 30, marginVertical: 20,}}>Welcome</RobotoText>
-        </View>
+      <ScrollView style={{flex: 1, backgroundColor: '#efefef'}}>
+        <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 250,}}>
+          <RobotoText style={{fontSize: 17, color: '#ccc'}}>Home Screen</RobotoText>
+        </View>  
       </ScrollView>
-    </View>
   );
 }
 
-HomeScreen.navigationOptions = {
-  title: 'Home',
-};
+HomeScreen.navigationOptions = ({navigation}) => ({
+  headerTitle: () => 
+    <RobotoText 
+      font='bold' 
+      style={{
+        fontSize: 28,
+        lineHeight: 40,
+        textAlign: 'left',
+        position: 'absolute',
+        left:0,
+      }}>Home</RobotoText>,
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  headerLeft: () => <MeButton 
+    profilePic={require('../assets/images/profile-pic-placeholder.png')}
+    onPress={() => navigation.navigate('AuthStack')}
+  />,
+
+  headerStyle: {
+    height: 60,
     backgroundColor: '#fff',
-  },
-  contentContainer: {
-    paddingTop: 30,
-  },
-  welcomeContainer: {
-    alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  welcomeImage: {
-    width: 100,
-    height: 80,
-    resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
+    borderBottomWidth: 0,
   },
 });
