@@ -31,7 +31,7 @@ HomeScreen.navigationOptions = ({navigation}) => ({
 
   headerLeft: () => <MeButton 
     profilePic={require('../assets/images/profile-pic-placeholder.png')}
-    onPress={() => navigation.navigate('AuthStack')}
+    onPress={() => navigation.navigate('Profile')}
   />,
 
   headerStyle: {
