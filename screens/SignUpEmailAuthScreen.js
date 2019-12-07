@@ -17,7 +17,7 @@ export default function SignUpEmailAuthScreen({navigation}) {
           <CustomTextInput
               font="regular"
               placeholder="Enter Confirmation Code"
-              autoFocus={false}
+              autoFocus={true}
               autoCapitalize= 'none'
               keyboardType='number-pad'
               textContentType='oneTimeCode'
@@ -37,7 +37,7 @@ export default function SignUpEmailAuthScreen({navigation}) {
             <SecondaryButton text='Change Email Address'/>
           </View>
 
-          <View style={{marginTop: 10,}}>
+          <View style={{marginTop: 10, marginBottom: 63,}}>
             <SecondaryButton text='Confirm by Phone'/>
           </View>
 

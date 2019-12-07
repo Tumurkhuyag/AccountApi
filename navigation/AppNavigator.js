@@ -8,8 +8,10 @@ import SignUpPasswordScreen from '../screens/SignUpPasswordScreen';
 import SignUpAgreementScreen from '../screens/SignUpAgreementScreen';
 import SignUpEmailAuthScreen from '../screens/SignUpEmailAuthScreen';
 import MyProfileScreen from '../screens/MyProfileScreen';
+import LoginScreen from '../screens/LoginScreen';
 
 const AuthStack = createStackNavigator({
+  Login: LoginScreen,
   InsertEmail: InsertEmailScreen,
   SignUpName: SignUpNameScreen,
   SignUpPassword: SignUpPasswordScreen,
@@ -24,7 +26,8 @@ const AuthStack = createStackNavigator({
       borderBottomColor: '#efefef',
     }
   }
-})
+}
+)
 
 const ProfileStack = createStackNavigator({
   MyProfile: MyProfileScreen, 
@@ -50,6 +53,7 @@ export default createAppContainer(createSwitchNavigator(
     AuthStack,
   },
   {
-    initialRouteName: 'MainStack'
+    initialRouteName: 'AuthStack'
   },
+  
 ));
