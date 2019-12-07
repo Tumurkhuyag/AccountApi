@@ -53,7 +53,7 @@ export default function LoginScreen({navigation}) {
                 />
                 
                 <View style={{marginTop: 10,}}>
-                    <PrimaryButton text="Next" onPress={() => navigation.navigate('MainStack')}/>
+                    <PrimaryButton text="Login" onPress={() => navigation.navigate('MainStack')}/>
                 </View>
     
             </View>
