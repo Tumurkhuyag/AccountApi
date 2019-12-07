@@ -23,9 +23,6 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} fontIcon={''} />
   ),
-  tabBarOptions: {
-    showLabel: false,
-  }
 };
 
 HomeStack.path = '';
@@ -42,9 +39,6 @@ SettingsStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} fontIcon={''} />
   ),
-  tabBarOptions: {
-    showLabel: false,
-  }
 };
 
 SettingsStack.path = '';
@@ -52,6 +46,17 @@ SettingsStack.path = '';
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   SettingsStack,
+},
+{
+  tabBarOptions: {
+    showLabel: false,
+    style:{
+      marginHorizontal: 40,
+      backgroundColor:'fff',
+      borderTopWidth:0,
+      height: 54,
+    },
+  }
 });
 
 tabNavigator.path = '';
