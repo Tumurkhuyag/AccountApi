@@ -7,6 +7,7 @@ import SignUpNameScreen from '../screens/SignUpNameScreen';
 import SignUpPasswordScreen from '../screens/SignUpPasswordScreen';
 import SignUpAgreementScreen from '../screens/SignUpAgreementScreen';
 import SignUpEmailAuthScreen from '../screens/SignUpEmailAuthScreen';
+import MyProfileScreen from '../screens/MyProfileScreen';
 
 const AuthStack = createStackNavigator({
   InsertEmail: InsertEmailScreen,
@@ -25,8 +26,13 @@ const AuthStack = createStackNavigator({
   }
 })
 
+const ProfileStack = createStackNavigator({
+  MyProfile: MyProfileScreen, 
+})
+
 const MainStack = createStackNavigator({
-  MainTab: MainTabNavigator
+  MainTab: MainTabNavigator,
+  Profile: ProfileStack,
 },
 {
   defaultNavigationOptions: {
