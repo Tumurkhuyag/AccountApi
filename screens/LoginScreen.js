@@ -67,5 +67,5 @@ export default function LoginScreen({navigation}) {
 
 LoginScreen.navigationOptions = ({navigation}) => ({
     headerTitle: () => <RobotoText font='medium' style={{fontSize: 17}}>Login</RobotoText>,
-    headerLeft: () => <BackButton onPress={() => navigation.navigate('MainStack')} />,
+    headerLeft: () => <BackButton onPress={() => navigation.navigate('InsertEmail')} />,
 });
