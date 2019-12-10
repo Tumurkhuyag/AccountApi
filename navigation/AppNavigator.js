@@ -11,16 +11,18 @@ import MyProfileScreen from '../screens/MyProfileScreen';
 import LoginScreen from '../screens/LoginScreen';
 import ForgotPassScreen from '../screens/ForgotPassScreen';
 import NewPasswordScreen from '../screens/NewPasswordScreen';
+import SignUpAddPhotoScreen from '../screens/SignUpAddPhotoScreen';
 
 const AuthStack = createStackNavigator({
-  ForgotPass: ForgotPassScreen,
-  Login: LoginScreen,
+  SignUpAddPhoto: SignUpAddPhotoScreen,
   InsertEmail: InsertEmailScreen,
   SignUpName: SignUpNameScreen,
   SignUpPassword: SignUpPasswordScreen,
   SignUpAgreement: SignUpAgreementScreen,
   SignUpEmailAuth: SignUpEmailAuthScreen,
   NewPassword: NewPasswordScreen,
+  ForgotPass: ForgotPassScreen,
+  Login: LoginScreen,
 },
 {
   defaultNavigationOptions: {
