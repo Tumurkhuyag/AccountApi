@@ -14,7 +14,6 @@ import NewPasswordScreen from '../screens/NewPasswordScreen';
 import SignUpAddPhotoScreen from '../screens/SignUpAddPhotoScreen';
 
 const AuthStack = createStackNavigator({
-  SignUpAddPhoto: SignUpAddPhotoScreen,
   InsertEmail: InsertEmailScreen,
   SignUpName: SignUpNameScreen,
   SignUpPassword: SignUpPasswordScreen,
@@ -23,6 +22,7 @@ const AuthStack = createStackNavigator({
   NewPassword: NewPasswordScreen,
   ForgotPass: ForgotPassScreen,
   Login: LoginScreen,
+  SignUpAddPhoto: SignUpAddPhotoScreen,
 },
 {
   defaultNavigationOptions: {
