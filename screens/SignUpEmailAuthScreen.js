@@ -24,7 +24,7 @@ export default function SignUpEmailAuthScreen({navigation}) {
           />
           
           <View style={{marginTop: 10,}}>
-            <PrimaryButton text="Confirm" onPress={() => navigation.navigate('MainStack')}/>
+            <PrimaryButton text="Confirm" onPress={() => navigation.navigate('SignUpAddPhoto')}/>
           </View>
         </View>
         
