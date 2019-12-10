@@ -11,7 +11,13 @@ export default function FontIcon(props) {
             break;
         case "regular":
             iconName = "fa-regular-400"
-            terbreak;
+            break;
+        case "light":
+            iconName = "fa-light-300"
+            break;
+        case "duo":
+            iconName = "fa-duotone-900"
+            break;
         case "solid":
             iconName = "fa-solid-900"
             break;
