@@ -18,7 +18,7 @@ export default function SignUpPasswordScreen({navigation}) {
                     autoFocus={true}
                     keyboardType='default'
                     textContentType='name'
-                    secureTextEntry={true}
+                    // secureTextEntry={true}
                 />
                 
                 <View style={{marginTop: 10,}}>
