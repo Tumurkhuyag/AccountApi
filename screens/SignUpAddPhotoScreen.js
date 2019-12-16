@@ -24,7 +24,7 @@ getPermissionAsync = async () => {
     const permissionCam = await Permissions.askAsync(Permissions.CAMERA);
     if (permission.status !== 'granted') {
       alert('Sorry, we need camera roll permissions to make this work!');
-    }else if(permissionCam.status !== 'granted'){
+    } else if (permissionCam.status !== 'granted') {
       alert('Sorry, we need camera permissions to make this work!');
     }
   }
